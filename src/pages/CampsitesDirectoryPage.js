@@ -5,7 +5,7 @@ import CampsitesList from '../features/campsites/CampsitesList';
 import { selectCampsiteById } from '../features/campsites/campsitesSlice';
 
 const CampsitesDirectoryPage = () => {
-    const [ CampsiteId, setCampsiteId ] = useState(0);
+    const [ campsiteId, setCampsiteId ] = useState(0);
     const selectedCampsite = selectCampsiteById(campsiteId);
 
     return (
