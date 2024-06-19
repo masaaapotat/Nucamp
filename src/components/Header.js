@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// reactstrap
 import { 
     Navbar, 
     NavbarBrand,
@@ -11,6 +12,7 @@ import { NavLink } from 'react-router-dom';
 import NucampLogo from '../app/assets/img/logo.png';
 
 const Header = () => {
+    // using usestate hook to set a local variable
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -19,8 +21,11 @@ const Header = () => {
                 <img src={NucampLogo} alt='nucamp logo' className='float-start' />
                 <h1 className='mt-1'>NuCamp</h1>
             </NavbarBrand>
+            {/* this causes the navbar toggler componet to toggle the value of the menuopen whenever its clicked */}
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)}/>
+            {/* this causes the navbar toggler componet to toggle the value of the menuopen whenever its clicked */}
             <Collapse isOpen={menuOpen} navbar>
+
                 <Nav className='ms-auto' navbar>
                     <NavItem>
                         <NavLink className='nav-link' to='/'>
